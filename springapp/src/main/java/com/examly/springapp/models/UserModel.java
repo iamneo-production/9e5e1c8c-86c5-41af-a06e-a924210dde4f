@@ -2,12 +2,7 @@ package com.examly.springapp.models;
 
 import javax.persistence.*;
 
-@Entity.classpath
-        .project
-        .settings/
-        done
-        junit/
-        puppeteer/
+@Entity
 @Table(name = "user")  // name of the database table
 public class UserModel {
 
