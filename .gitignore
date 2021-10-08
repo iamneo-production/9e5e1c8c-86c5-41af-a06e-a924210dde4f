@@ -5,3 +5,5 @@ springapp/target/
 .settings/
 done
 junit/
+puppeteer/
+angular/node_modules/
