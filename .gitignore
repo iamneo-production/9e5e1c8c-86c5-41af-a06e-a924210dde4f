@@ -1,0 +1,8 @@
+target/
+springapp/target/
+.classpath
+.project
+.settings/
+done
+junit/
+puppeteer
