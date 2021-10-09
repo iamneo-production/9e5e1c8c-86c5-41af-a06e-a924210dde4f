@@ -21,6 +21,10 @@ import { FormsModule } from '@angular/forms';
 import { SolvedIssueComponent } from './user/solved-issue/solved-issue.component';
 import { AdminSolvedIssueComponent } from './admin/admin-solved-issue/admin-solved-issue.component';
 import { EditIssueComponent } from './user/edit-issue/edit-issue.component';
+import { AdminActiveIssueComponent } from './admin/admin-active-issue/admin-active-issue.component';
+import { AdminEditStatusComponent } from './admin/admin-edit-status/admin-edit-status.component';
+import { AdminAddEmployeeComponent } from './admin/admin-add-employee/admin-add-employee.component';
+import { AdminUpdateEmployeComponent } from './admin/admin-update-employe/admin-update-employe.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { EditIssueComponent } from './user/edit-issue/edit-issue.component';
     AdminHomeComponent,
     SolvedIssueComponent,
     AdminSolvedIssueComponent,
-    EditIssueComponent
+    EditIssueComponent,
+    AdminActiveIssueComponent,
+    AdminEditStatusComponent,
+    AdminAddEmployeeComponent,
+    AdminUpdateEmployeComponent
   ],
   imports: [
     BrowserModule,
