@@ -13,24 +13,24 @@
           </li>
         </ul>
       </div>
-  </nav>
-  <div>
-    <div class="main-div">
+</nav>
+<div>
+  <div class="main-div">
     <mat-card>
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a  id="newButton" class="nav-link" [routerLink]="['/adminhome']">New</a>
+          <a id="newButton" class="nav-link" [routerLink]="['/adminhome']">New</a>
         </li>
         <li class="nav-item">
-          <a id="activeButton" class="nav-link" [routerLink]="['/adminactiveissue']">Active</a>
+          <a id="activeButton" class="nav-link active" [routerLink]="['/adminactiveissue']">Active</a>
         </li>
         <li class="nav-item">
-          <a id="solvedButton" class="nav-link active"[routerLink]="['/adminsolvedissue']">Solved</a> 
+          <a id="solvedButton" class="nav-link"[routerLink]="['/adminsolvedissue']">Solved</a> 
         </li>
       </ul>
     </mat-card>
-    </div>
-    <div class="container">
+  </div>
+  <div class="container">
       <div class="split-left">
         <div id="grid1" class="inner-container" style="background-color: rebeccapurple;">
           <div class="row">
@@ -48,7 +48,7 @@
             </div>
             <div class="col">
                 <u>Status</u>
-                <p>Solved</p>
+                <p>Active</p>
             </div>
           </div>
         </div>
@@ -88,5 +88,6 @@
           </table>
         </mat-card>
      </div>
-    </div>
-  </div>
+   </div>
+</div>
+

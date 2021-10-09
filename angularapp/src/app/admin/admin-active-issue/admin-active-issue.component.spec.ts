@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddEmployeeComponent } from './add-employee.component';
+import { AdminActiveIssueComponent } from './admin-active-issue.component';
 
-describe('AddEmployeeComponent', () => {
-  let component: AddEmployeeComponent;
-  let fixture: ComponentFixture<AddEmployeeComponent>;
+describe('AdminActiveIssueComponent', () => {
+  let component: AdminActiveIssueComponent;
+  let fixture: ComponentFixture<AdminActiveIssueComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddEmployeeComponent ]
+      declarations: [ AdminActiveIssueComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddEmployeeComponent);
+    fixture = TestBed.createComponent(AdminActiveIssueComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

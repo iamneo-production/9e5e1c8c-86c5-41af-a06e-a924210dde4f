@@ -11,5 +11,14 @@ export class ManageUsersComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  hide = true;
+  display = false;
+  addEmployee(){
+    this.display = !this.display;
+  }
+  display1=false;
+  updateEmployee()
+  {
+    this.display1 = !this.display1;
+  }
 }

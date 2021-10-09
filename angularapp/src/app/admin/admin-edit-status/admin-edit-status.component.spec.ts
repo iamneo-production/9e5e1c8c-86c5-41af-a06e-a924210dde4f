@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditStatusComponent } from './edit-status.component';
+import { AdminEditStatusComponent } from './admin-edit-status.component';
 
-describe('EditStatusComponent', () => {
-  let component: EditStatusComponent;
-  let fixture: ComponentFixture<EditStatusComponent>;
+describe('AdminEditStatusComponent', () => {
+  let component: AdminEditStatusComponent;
+  let fixture: ComponentFixture<AdminEditStatusComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditStatusComponent ]
+      declarations: [ AdminEditStatusComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditStatusComponent);
+    fixture = TestBed.createComponent(AdminEditStatusComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
