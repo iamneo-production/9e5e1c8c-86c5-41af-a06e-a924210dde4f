@@ -11,5 +11,6 @@ export class AdminUpdateEmployeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  hide=true;
 
 }

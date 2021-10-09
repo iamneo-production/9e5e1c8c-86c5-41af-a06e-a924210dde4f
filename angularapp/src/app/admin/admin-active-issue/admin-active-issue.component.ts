@@ -11,5 +11,6 @@ export class AdminActiveIssueComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
 }

@@ -8,6 +8,7 @@ import { ManageUsersComponent } from './admin/manage-users/manage-users.componen
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import {AdminSolvedIssueComponent } from './admin/admin-solved-issue/admin-solved-issue.component';
 import { SolvedIssueComponent } from './user/solved-issue/solved-issue.component';
+import { AdminActiveIssueComponent } from './admin/admin-active-issue/admin-active-issue.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:'usersolvedissue',component:SolvedIssueComponent},
   {path:'adminmanageusers',component:ManageUsersComponent},
   {path:'adminhome',component:AdminHomeComponent},
-  {path:'adminsolvedissue',component:AdminSolvedIssueComponent}
+  {path:'adminsolvedissue',component:AdminSolvedIssueComponent},
+  {path:'adminactiveissue',component:AdminActiveIssueComponent}
 ];
 
 @NgModule({
