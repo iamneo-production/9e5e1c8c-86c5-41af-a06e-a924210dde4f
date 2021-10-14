@@ -11,5 +11,9 @@ export class AdminHomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  display = false;
+  onEditStatus(){
+    this.display = !this.display;
+  }
 
 }

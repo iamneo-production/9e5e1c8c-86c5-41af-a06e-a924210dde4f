@@ -1,0 +1,15 @@
+<div fxLayoutAlign="end end" fxFlexFill class="main-div">
+    <mat-card fxFlex="70%">
+        <form fxLayoutAlign="stretch" fxLayout="column" class="issue-form">
+            <mat-form-field appearance="fill" >
+                <mat-label>Select Developer</mat-label>
+                <mat-select name="selectDeveloper" id="selectDeveloper"  required ngModel>
+                  <mat-option value="Developer1">Mr XYZ</mat-option>
+                  <mat-option value="Developer2">Mr BEN</mat-option>
+                  <mat-option value="Developer3">Mr ABC</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <input type="submit" id="updateButton" class="btn btn-primary" value="Update" style="width: 20%; ">
+          </form>
+    </mat-card>
+  </div>
