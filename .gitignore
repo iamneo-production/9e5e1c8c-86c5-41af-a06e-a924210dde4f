@@ -4,4 +4,11 @@ springapp/target/
 .project
 .settings/
 done
+<<<<<<< Updated upstream
 junit/
+=======
+junit/
+puppeteer/
+angular/node_modules/
+/.metadata/
+>>>>>>> Stashed changes
