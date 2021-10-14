@@ -1,0 +1,9 @@
+target/
+springapp/target/
+.classpath
+.project
+.settings/
+done
+junit/
+puppeteer/
+angular/node_modules/

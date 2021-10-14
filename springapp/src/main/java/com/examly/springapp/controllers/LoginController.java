@@ -10,13 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-<<<<<<< HEAD
-import com.examly.springapp.models.LoginModel;
-
-@RestController
-public class LoginController {
-/*	@Autowired
-=======
 import com.examly.springapp.models.JwtModel;
 import com.examly.springapp.models.LoginModel;
 import com.examly.springapp.service.CurrentUserDetailsService;
@@ -25,7 +18,6 @@ import com.examly.springapp.util.JwtUtil;
 @RestController
 public class LoginController {
 	@Autowired
->>>>>>> 41c2f56f8ed8a8baaf4279ea9f17e4d43218dd5b
 	private AuthenticationManager authenticationManager;
 	
 	@Autowired
@@ -52,10 +44,5 @@ public class LoginController {
 		final String jwt = jwtTokenUtil.generateToken(userDetails);
 
 		return ResponseEntity.ok(new JwtModel(jwt));
-<<<<<<< HEAD
-	}*/
-}
-=======
 	}
 }
->>>>>>> 41c2f56f8ed8a8baaf4279ea9f17e4d43218dd5b
