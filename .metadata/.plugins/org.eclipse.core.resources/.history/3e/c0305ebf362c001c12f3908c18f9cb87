@@ -1,0 +1,22 @@
+package com.examly.springapp.service;
+
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+import org.springframework.stereotype.Service;
+import com.examly.springapp.models.ComplaintModel;
+import com.examly.springapp.models.UserModel;
+
+@Service
+public class ComplaintService {
+//ComplaintModel(int id, String complaintId, Date createdOn, UserModel createdBy, UserModel resolveBy,	String status)
+	private List<ComplaintModel> issue=Arrays.asList(
+			new ComplaintModel(1,"c_001","2021-10-10","user1","emp1","true")
+			//new ComplaintModel(1,"c_001","2021-10-10","user1","emp1","true")
+			
+			);
+	
+	public List<ComplaintModel> getIssue(){
+		return issue;
+	}
+}
