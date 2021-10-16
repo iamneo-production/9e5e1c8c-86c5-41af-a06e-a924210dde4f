@@ -1,5 +1,6 @@
 package com.examly.springapp.service;
 import java.util.List;
+import java.util.ArrayList;
 
 import javax.transaction.Transactional;
 
@@ -19,11 +20,9 @@ public class StatusService {
 	public StatusService(StatusRepository statusrepository) {
 		this.statusrepository = statusrepository;
 	}
-	
-	private List<StatusModel> openStatus;
-	private List<StatusModel> closedStatus;
 
 	public List<StatusModel> showOpenStatus() {
+        List<StatusModel> openStatus=new ArrayList<StatusModel>();
 		List<StatusModel> list=statusrepository.findAll();
 		for(StatusModel  s:list) {
 			if(s.getStatus()=="open")
@@ -34,6 +33,7 @@ public class StatusService {
 		return openStatus;
 	}
 	public List<StatusModel> showClosedStatus() {
+        List<StatusModel> closedStatus=new ArrayList<StatusModel>();
 		List<StatusModel> list=statusrepository.findAll();
 		for(StatusModel s:list) {
 			if(s.getStatus()=="closed")
