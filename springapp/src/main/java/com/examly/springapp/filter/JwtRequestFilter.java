@@ -38,7 +38,6 @@ public class JwtRequestFilter extends OncePerRequestFilter{
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             jwt = authorizationHeader.substring(7);
             email = jwtUtil.extractEmail(jwt);
-            System.out.println(email);
         }
 
 
