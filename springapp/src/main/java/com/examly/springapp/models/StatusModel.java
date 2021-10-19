@@ -11,35 +11,25 @@ import javax.persistence.Table;
 public class StatusModel {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
-	private String statusId; 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int statusId; 
 	private String status;
 	private String statusDesc;
 	
 	public StatusModel() {}
-	
-	public StatusModel(int id, String statusId, String status, String statusDesc) {
+
+	public StatusModel(int statusId, String status, String statusDesc) {
 		super();
-		this.id = id;
 		this.statusId = statusId;
 		this.status = status;
 		this.statusDesc = statusDesc;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getStatusId() {
+	public int getStatusId() {
 		return statusId;
 	}
 
-	public void setStatusId(String statusId) {
+	public void setStatusId(int statusId) {
 		this.statusId = statusId;
 	}
 
@@ -58,12 +48,4 @@ public class StatusModel {
 	public void setStatusDesc(String statusDesc) {
 		this.statusDesc = statusDesc;
 	}
-	
-	
-	
-	/* statusId: String
-     * status: String
-     * statusDesc: Desc
-	*/
-
 }

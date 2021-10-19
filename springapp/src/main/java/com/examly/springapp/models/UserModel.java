@@ -1,15 +1,23 @@
 package com.examly.springapp.models;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
 @Entity
-@Table(name = "user")  // name of the database table
+@Table(name = "user")
 public class UserModel {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String email;
+	@JsonProperty(access = Access.WRITE_ONLY)
 	private String password;
 	private String username;
 	private String mobileNumber;
