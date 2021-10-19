@@ -5,44 +5,49 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 import com.examly.springapp.models.ComplaintModel;
-import com.examly.springapp.models.UserModel;
 import com.examly.springapp.repository.ComplaintRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import java.util.ArrayList;
-import java.util.Arrays;
+
  
 @Service
 @Transactional
 public class ComplaintService {
 	
 	@Autowired
-	private ComplaintRepository complaintrepository;
+	private ComplaintRepository complaintRepository;
 	
 
 	@Autowired
 	public ComplaintService(ComplaintRepository complaintrepository) {
-		this.complaintrepository = complaintrepository;
+		this.complaintRepository = complaintrepository;
+	}
+	
+	
+	public List<ComplaintModel> findByCreatorId(int id){
+		return complaintRepository.findByCreatedById(id);
+	}
+	
+	public List<ComplaintModel> findByResolverId(int id){
+		return complaintRepository.findByResolvedById(id);
 	}
 	
 	public ComplaintModel addComplaint(ComplaintModel complaint) {
-		return complaintrepository.save(complaint);
+		return complaintRepository.save(complaint);
 	}
 
 
 	public List<ComplaintModel> findAllComplaints() {
-		return complaintrepository.findAll();
+		return complaintRepository.findAll();
 	}
-	public List<ComplaintModel> findByComplaintId(String complaintId) {
-		return complaintrepository.findByComplaintId(complaintId);
+	public ComplaintModel findByComplaintId(int complaintId) {
+		return complaintRepository.findById(complaintId).get();
 	}
 
 	public ComplaintModel updateComplaint(ComplaintModel complaint) {
-		return complaintrepository.save(complaint);
+		return complaintRepository.save(complaint);
 	}
 
-	public void deleteComplaint(String complaintId) {
-		complaintrepository.deleteComplaintById(complaintId);	
-		
-	}
-	
+	public void deleteComplaint(int complaintId) {
+		complaintRepository.deleteById(complaintId);	
+	}	
 }

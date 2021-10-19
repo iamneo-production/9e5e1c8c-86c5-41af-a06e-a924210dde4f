@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
-import com.example.demo.StatusModel;
-import com.example.demo.StatusRepository;
+import com.examly.springapp.models.StatusModel;
+import com.examly.springapp.repository.StatusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
@@ -20,12 +20,20 @@ public class StatusService {
 	public StatusService(StatusRepository statusrepository) {
 		this.statusrepository = statusrepository;
 	}
+	
+	public StatusModel updateStatus(StatusModel status) {
+		return statusrepository.save(status);
+	}
+	
+	public StatusModel addStatus(StatusModel status) {
+		return statusrepository.save(status);
+	}
 
 	public List<StatusModel> showOpenStatus() {
-        List<StatusModel> openStatus=new ArrayList<StatusModel>();
+        List<StatusModel> openStatus=new ArrayList<>();
 		List<StatusModel> list=statusrepository.findAll();
 		for(StatusModel  s:list) {
-			if(s.getStatus()=="open")
+			if(s.getStatus().equals("Active"))
 			{
 				openStatus.add(s);
 			}
@@ -33,18 +41,14 @@ public class StatusService {
 		return openStatus;
 	}
 	public List<StatusModel> showClosedStatus() {
-        List<StatusModel> closedStatus=new ArrayList<StatusModel>();
+        List<StatusModel> closedStatus=new ArrayList<>();
 		List<StatusModel> list=statusrepository.findAll();
 		for(StatusModel s:list) {
-			if(s.getStatus()=="closed")
+			if(s.getStatus().equals("Closed"))
 			{
 				closedStatus.add(s);
 			}
 		}
 		return closedStatus;
-	}
-		
+	}	
 }
-	
-    
-
