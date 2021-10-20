@@ -98,13 +98,13 @@ public class ComplaintController {
 	
 	@GetMapping("/complaint/{id}")
 	public ResponseEntity<ComplaintModel> getComplaint(@PathVariable("id") int id){
-		return new ResponseEntity<>(complaintservice.findByComplaintId(id),HttpStatus.FOUND);
+		return new ResponseEntity<>(complaintservice.findByComplaintId(id),HttpStatus.OK);
 	}
 	
 	@PutMapping("/complaint/{id}")
 	public ResponseEntity<ComplaintModel> updateComplaint(@RequestBody ComplaintModel complaint, @PathVariable int id){
 		ComplaintModel updatecomplaint= complaintservice.updateComplaint(complaint);
-		return new ResponseEntity<>(updatecomplaint,HttpStatus.CREATED);
+		return new ResponseEntity<>(updatecomplaint,HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/complaint/{id}")
@@ -135,13 +135,13 @@ public class ComplaintController {
 	
 	@GetMapping("/employee/complaint/{id}")
 	public ResponseEntity<ComplaintModel> getEmployeeComplaint(@PathVariable("id") int id){
-		return new ResponseEntity<>(complaintservice.findByComplaintId(id),HttpStatus.FOUND);
+		return new ResponseEntity<>(complaintservice.findByComplaintId(id),HttpStatus.OK);
 	}
 	
 	@PutMapping("/employee/complaint/{id}")
 	public ResponseEntity<ComplaintModel> updateEmployeeComplaint(@RequestBody ComplaintModel complaint, @PathVariable int id){
 		ComplaintModel updatecomplaint= complaintservice.updateComplaint(complaint);
-		return new ResponseEntity<>(updatecomplaint,HttpStatus.CREATED);
+		return new ResponseEntity<>(updatecomplaint,HttpStatus.OK);
 	}
 	
 }
