@@ -24,7 +24,15 @@ import { EditIssueComponent } from './user/edit-issue/edit-issue.component';
 import { AdminActiveIssueComponent } from './admin/admin-active-issue/admin-active-issue.component';
 import { AdminEditStatusComponent } from './admin/admin-edit-status/admin-edit-status.component';
 import { AdminAddEmployeeComponent } from './admin/admin-add-employee/admin-add-employee.component';
-import { AdminUpdateEmployeComponent } from './admin/admin-update-employe/admin-update-employe.component';
+import { AdminManageUsersByIdComponent } from './admin/admin-manage-users-by-id/admin-manage-users-by-id.component';
+import { AdminUpdateEmployeeComponent } from './admin/admin-update-employee/admin-update-employee.component';
+import { AssignDeveloperByIdComponent } from './admin/assign-developer-by-id/assign-developer-by-id.component';
+import { EditStatusComponent } from './employee/edit-status/edit-status.component';
+import { EditStatusByIdComponent } from './employee/edit-status-by-id/edit-status-by-id.component';
+import { EmployeeHomeComponent } from './employee/employee-home/employee-home.component';
+import { EmployeeSolvedIssueComponent } from './employee/employee-solved-issue/employee-solved-issue.component';
+import { EditIssueByIdComponent } from './user/edit-issue-by-id/edit-issue-by-id.component';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +49,15 @@ import { AdminUpdateEmployeComponent } from './admin/admin-update-employe/admin-
     AdminActiveIssueComponent,
     AdminEditStatusComponent,
     AdminAddEmployeeComponent,
-    AdminUpdateEmployeComponent
+    AdminManageUsersByIdComponent,
+    AdminUpdateEmployeeComponent,
+    AssignDeveloperByIdComponent,
+    EditStatusComponent,
+    EditStatusByIdComponent,
+    EmployeeHomeComponent,
+    EmployeeSolvedIssueComponent,
+    EditIssueByIdComponent,
+    
   ],
   imports: [
     BrowserModule,
